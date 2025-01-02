@@ -29,9 +29,5 @@ jobs:
 
       - name: Upload to S3
         run: |
-          aws s3 cp . s3://tv.craighoad.com/ --recursive
+          aws s3 cp . s3://www.craighoad.com/ --recursive
 
-      - name: Upload to S3
-        run: |
-          aws s3 cp ./tv/horror/2024/horror_tv_2024.json s3://banstore.craighoad.com/tv/horror/2024/horror_tv_2024.json
-          aws s3 cp ./tv/thriller/2024/thriller_tv_2024.json s3://banstore.craighoad.com/tv/thriller/2024/thriller_tv_2024.json
