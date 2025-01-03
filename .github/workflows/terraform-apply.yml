@@ -31,3 +31,11 @@ jobs:
         run: |
           aws s3 cp . s3://www.craighoad.com/ --recursive
 
+      - name: Invalidate CloudFront Cache
+        run: |
+          DISTRIBUTION_ID="E1CCR0H9RGWPUP"
+          aws cloudfront create-invalidation \
+            --distribution-id $DISTRIBUTION_ID \
+            --paths "/*"  # This invalidates all objects in the CloudFront cache
+
+
