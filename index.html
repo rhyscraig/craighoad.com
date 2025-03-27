@@ -21,7 +21,43 @@
   <!-- Custom styles for this template -->
   <link href="css/resume.min.css" rel="stylesheet">
   <style>img.companies { margin-right: 15px; margin-bottom: 25px; -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-      filter: grayscale(100%); margin-right: 15px; opacity: 0.40; z-index: -1;}</style>
+      filter: grayscale(100%); margin-right: 15px; opacity: 0.40; z-index: -1;}
+  
+    /* Timeline container */
+    .timeline {
+      position: relative;
+      margin: 0;
+      padding: 0;
+    }
+    /* Timeline items */
+    .timeline-item {
+      padding: 1rem 0;
+      border-left: 3px solid #007bff;
+      position: relative;
+    }
+    /* Timeline dot */
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -9px;
+      top: 1rem;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: #007bff;
+    }
+    /* Adjust spacing on smaller screens */
+    @media (max-width: 767.98px) {
+      .timeline-item {
+        border-left: none;
+        padding-left: 0;
+      }
+      .timeline-item::before {
+        left: 0;
+      }
+    }
+  </style>
+
 </head>
 
 <body id="page-top">
@@ -250,66 +286,75 @@
 
     <hr class="m-0">
 
-    <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="education">
+    <section class="resume-section p-3 p-lg-5" id="education">
       <div class="w-100">
-        <h2 class="mb-5">Education</h2>
-
-        <div class="border rounded-lg px-3 py-3 mb-3">
-          <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-0">
-            <div class="resume-content" style="min-width: 35%">
-                <a href="https://www.isc2.org/Certifications/CCSP"><img src="img/ISC2-Main-Logo-Green.png" height="30" class="mb-2" alt="ISC2 logo"></a>
-              <div class="subheading mb-2">CCSP - Certified Cloud Security Professional</div>
-              <span class="text-primary mt-1">Dec 2019 - no expiry</span>
+        <h2 class="mb-5 text-center">Education &amp; Certifications</h2>
+        <div class="timeline">
+          <!-- Timeline Item 1: CCSP -->
+          <div class="timeline-item mb-4">
+            <div class="row align-items-center">
+              <div class="col-md-2 text-center">
+                <a href="https://www.isc2.org/Certifications/CCSP">
+                  <img src="img/ISC2-Main-Logo-Green.png" height="40" alt="ISC2 logo">
+                </a>
+              </div>
+              <div class="col-md-10">
+                <h4 class="mb-1">CCSP - Certified Cloud Security Professional</h4>
+                <span class="text-primary">Dec 2019 - No Expiry</span>
+                <p class="mt-2 mb-0"><strong>The Industry’s Premier Cloud Security Certification</strong></p>
+                <p class="mb-0">Validates advanced skills to design, manage, and secure cloud data, applications, and infrastructure following ISC² best practices.</p>
+              </div>
             </div>
-            <div class="resume-content">
-              <p><b>The Industry’s Premier Cloud Security Certification</b></p>
-              <div class="mt-0">"The CCSP shows you have the advanced technical skills and knowledge to design, manage and secure data, applications and infrastructure in the cloud using best practices, policies and procedures established by the cybersecurity experts at (ISC)²."</div>
+          </div>
+          <!-- Timeline Item 2: AWS CSA -->
+          <div class="timeline-item mb-4">
+            <div class="row align-items-center flex-md-row-reverse">
+              <div class="col-md-2 text-center">
+                <a href="https://aws.amazon.com/certification/certified-solutions-architect-associate/">
+                  <img src="img/aws-logo.png" height="40" alt="AWS logo">
+                </a>
+              </div>
+              <div class="col-md-10">
+                <h4 class="mb-1">AWS Certified Solutions Architect – Associate</h4>
+                <span class="text-primary">July 2019 - July 2021</span>
+                <p class="mt-2 mb-0"><strong>Proven Expertise in AWS Solutions Architecture</strong></p>
+                <p class="mb-0">Demonstrates hands-on experience in designing fault-tolerant, cost-efficient, and secure distributed systems on AWS.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Timeline Item 3: Terraform Associate -->
+          <div class="timeline-item mb-4">
+            <div class="row align-items-center">
+              <div class="col-md-2 text-center">
+                <a href="https://www.hashicorp.com/certification/terraform-associate">
+                  <img src="img/terraform-logo.png" height="40" alt="Terraform logo">
+                </a>
+              </div>
+              <div class="col-md-10">
+                <h4 class="mb-1">Terraform Associate (2025)</h4>
+                <span class="text-primary">2025</span>
+                <p class="mt-2 mb-0"><strong>Expertise in Infrastructure as Code</strong></p>
+                <p class="mb-0">Validates proficiency in Terraform, showcasing advanced skills in designing, building, and managing infrastructure as code.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Timeline Item 4: BSc Psychology -->
+          <div class="timeline-item mb-4">
+            <div class="row align-items-center flex-md-row-reverse">
+              <div class="col-md-2 text-center">
+                <a href="http://www.openuniversity.edu/courses/programmes/bachelor-degrees/bachelor-of-science">
+                  <img src="img/ou-logo.png" height="40" alt="Open University logo">
+                </a>
+              </div>
+              <div class="col-md-10">
+                <h4 class="mb-1">BSc (Honours) Psychology – 2:1</h4>
+                <span class="text-primary">May 2004 - May 2009</span>
+                <p class="mt-2 mb-0"><strong>Solid Foundation in Human Behaviour &amp; Analytical Thinking</strong></p>
+                <p class="mb-0">Provided robust insights into cognitive, clinical, and social psychology, enhancing my analytical, communication, and problem-solving skills.</p>
+              </div>
             </div>
           </div>
         </div>
-
-        <div class="border rounded-lg px-3 py-3 mb-3">
-          <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-0">
-            <div class="resume-content" style="min-width: 35%">
-              <a href="https://aws.amazon.com/certification/certified-solutions-architect-associate/"><img src="img/aws-logo.png" height="30" class="mb-2" alt="AWS logo"></a>
-              <div class="subheading mb-2">AWS Certified Solutions Architect – Associate</div>
-              <span class="text-primary mt-1">July 2019 - July 2021</span>
-            </div>
-            <div class="resume-content">
-              <p><b>Demonstrates competence to perform AWS solutions architecture</b></p>
-              <div class="mt-0">"The AWS Certified Solutions Architect - Associate examination is intended for individuals who perform a solutions architect role and have one or more years of hands-on experience designing available, cost-efficient, fault-tolerant, and scalable distributed systems on AWS."</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="border rounded-lg px-3 py-3 mb-3">
-          <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-0">
-            <div class="resume-content" style="min-width: 35%">
-              <a href="http://www.openuniversity.edu/courses/programmes/bachelor-degrees/bachelor-of-science"><img src="img/ou-logo.png" height="30" class="mb-2" alt="AWS logo"></a>
-              <div class="subheading mb-2">BSc (Honours) Psychology - 2:1</div>
-              <span class="text-primary mt-1">May 2004 - May 2009</span>
-            </div>
-            <div class="resume-content">
-              <p><b>Solid grounding across biological, clinical, cognitive, health and social psychology</b></p>
-              <div class="mt-0">"As psychology is the study and science of human behaviour, it touches every aspect of our lives. This degree explores key questions around why we do the things we do and how we interact with others. You’ll explore how psychologists use research evidence to contribute to debates on forensic science, mental health, relationships, child development, employment and much more. You’ll gain knowledge and understanding of different areas of psychology; develop valuable analytical and communication skills; and enhance your ability to work both independently and collaboratively. This will put you in a strong position when it comes to employment opportunities."</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="border rounded-lg px-3 py-3">
-          <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-0">
-            <div class="resume-content" style="min-width: 35%">
-              <a href="https://www.oaklands.ac.uk/course-area/a-levels"><img src="img/oaklands_college_logo.png" height="30" class="mb-2" alt="AWS logo"></a>
-              <div class="subheading mb-2">A-Levels - Grades B to C</div>
-              <span class="text-primary mt-1">September 1998 - September 2001</span>
-            </div>
-            <div class="resume-content">
-              <p><b>Film Studies, Psychology, English Language and Biology</b></p>
-              <div class="mt-0">Undertook 4 A-Levels in Film Studies, Psychology, English Language and Biology and achieved grades B - C across the subjects.</div>
-            </div>
-          </div>
-        </div>
-
       </div>
     </section>
 
