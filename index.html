@@ -22,40 +22,6 @@
   <link href="css/resume.min.css" rel="stylesheet">
   <style>img.companies { margin-right: 15px; margin-bottom: 25px; -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
       filter: grayscale(100%); margin-right: 15px; opacity: 0.40; z-index: -1;}
-  
-    /* Timeline container */
-    .timeline {
-      position: relative;
-      margin: 0;
-      padding: 0;
-    }
-    /* Timeline items */
-    .timeline-item {
-      padding: 1rem 0;
-      border-left: 3px solid #007bff;
-      position: relative;
-    }
-    /* Timeline dot */
-    .timeline-item::before {
-      content: "";
-      position: absolute;
-      left: -9px;
-      top: 1rem;
-      width: 18px;
-      height: 18px;
-      border-radius: 50%;
-      background: #007bff;
-    }
-    /* Adjust spacing on smaller screens */
-    @media (max-width: 767.98px) {
-      .timeline-item {
-        border-left: none;
-        padding-left: 0;
-      }
-      .timeline-item::before {
-        left: 0;
-      }
-    }
   </style>
 
 </head>
@@ -289,68 +255,58 @@
     <section class="resume-section p-3 p-lg-5" id="education">
       <div class="container">
         <h2 class="pb-2 border-bottom text-center">Education &amp; Certifications</h2>
-        <div class="row g-4 py-4">
+        <div class="row g-4 py-4 text-center">
           <!-- CCSP -->
-          <div class="col-12 col-md-6 d-flex align-items-start">
-            <div class="icon-square text-bg-primary bg-gradient rounded-3 d-inline-flex align-items-center justify-content-center fs-3 flex-shrink-0 me-3">
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="icon-square text-bg-primary bg-gradient rounded-3 d-inline-flex align-items-center justify-content-center mb-3">
               <a href="https://www.isc2.org/Certifications/CCSP">
-                <img src="img/ISC2-Main-Logo-Green.png" height="40" alt="ISC2 logo">
+                <img src="img/ISC2-Main-Logo-Green.png" class="img-fluid" alt="ISC2 logo">
               </a>
             </div>
-            <div>
-              <h3 class="fs-5 mb-1">CCSP - Certified Cloud Security Professional</h3>
-              <span class="text-primary">Dec 2019 - No Expiry</span>
-              <p class="mb-0">Validates advanced cloud security skills using ISC² best practices.</p>
-            </div>
+            <h3 class="fs-5 mb-1">CCSP - Certified Cloud Security Professional</h3>
+            <span class="text-primary d-block">Dec 2019 - No Expiry</span>
+            <p class="mb-0">Validates advanced cloud security skills using ISC² best practices.</p>
           </div>
           <!-- AWS CSA -->
-          <div class="col-12 col-md-6 d-flex align-items-start">
-            <div class="icon-square text-bg-primary bg-gradient rounded-3 d-inline-flex align-items-center justify-content-center fs-3 flex-shrink-0 me-3">
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="icon-square text-bg-primary bg-gradient rounded-3 d-inline-flex align-items-center justify-content-center mb-3">
               <a href="https://aws.amazon.com/certification/certified-solutions-architect-associate/">
-                <img src="img/aws-logo.png" height="40" alt="AWS logo">
+                <img src="img/aws-logo.png" class="img-fluid" alt="AWS logo">
               </a>
             </div>
-            <div>
-              <h3 class="fs-5 mb-1">AWS Certified Solutions Architect – Associate</h3>
-              <span class="text-primary">July 2019 - July 2021</span>
-              <p class="mb-0">Demonstrates expertise in designing cost-efficient and secure AWS solutions.</p>
-            </div>
+            <h3 class="fs-5 mb-1">AWS Certified Solutions Architect – Associate</h3>
+            <span class="text-primary d-block">July 2019 - July 2021</span>
+            <p class="mb-0">Demonstrates expertise in designing cost-efficient and secure AWS solutions.</p>
           </div>
           <!-- Terraform Associate -->
-          <div class="col-12 col-md-6 d-flex align-items-start">
-            <div class="icon-square text-bg-primary bg-gradient rounded-3 d-inline-flex align-items-center justify-content-center fs-3 flex-shrink-0 me-3">
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="icon-square text-bg-primary bg-gradient rounded-3 d-inline-flex align-items-center justify-content-center mb-3">
               <a href="https://www.hashicorp.com/certification/terraform-associate">
-                <img src="img/terraform-logo.png" height="40" alt="Terraform logo">
+                <img src="img/terraform-logo.png" class="img-fluid" alt="Terraform logo">
               </a>
             </div>
-            <div>
-              <h3 class="fs-5 mb-1">Terraform Associate (2025)</h3>
-              <span class="text-primary">2025</span>
-              <p class="mb-0">Certifies proficiency in Infrastructure as Code and Terraform best practices.</p>
-            </div>
+            <h3 class="fs-5 mb-1">Terraform Associate (2025)</h3>
+            <span class="text-primary d-block">2025</span>
+            <p class="mb-0">Certifies proficiency in Infrastructure as Code and Terraform best practices.</p>
           </div>
           <!-- BSc (Honours) Psychology -->
-          <div class="col-12 col-md-6 d-flex align-items-start">
-            <div class="icon-square text-bg-primary bg-gradient rounded-3 d-inline-flex align-items-center justify-content-center fs-3 flex-shrink-0 me-3">
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="icon-square text-bg-primary bg-gradient rounded-3 d-inline-flex align-items-center justify-content-center mb-3">
               <a href="http://www.openuniversity.edu/courses/programmes/bachelor-degrees/bachelor-of-science">
-                <img src="img/ou-logo.png" height="40" alt="Open University logo">
+                <img src="img/ou-logo.png" class="img-fluid" alt="Open University logo">
               </a>
             </div>
-            <div>
-              <h3 class="fs-5 mb-1">BSc (Honours) Psychology – 2:1</h3>
-              <span class="text-primary">May 2004 - May 2009</span>
-              <p class="mb-0">A solid foundation in human behaviour, enhancing analytical and communication skills.</p>
-            </div>
+            <h3 class="fs-5 mb-1">BSc (Honours) Psychology – 2:1</h3>
+            <span class="text-primary d-block">May 2004 - May 2009</span>
+            <p class="mb-0">A solid foundation in human behaviour, enhancing analytical and communication skills.</p>
           </div>
         </div>
       </div>
       <style>
-        /* Ensure consistent icon container sizing */
         .icon-square {
-          width: 4.5rem;
-          height: 4.5rem;
+          width: 5rem;
+          height: 5rem;
         }
-        /* Ensure logos scale appropriately */
         .icon-square img {
           max-width: 100%;
           max-height: 100%;
