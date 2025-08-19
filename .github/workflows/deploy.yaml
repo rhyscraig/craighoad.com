@@ -42,7 +42,6 @@ jobs:
 
       # --- DEPLOYMENT STEPS ---
       - name: Configure AWS Credentials
-        # Securely authenticates with your AWS account using an IAM role
         uses: aws-actions/configure-aws-credentials@v4
         with:
           role-to-assume: arn:aws:iam::767828739298:role/GitHubAction-AssumeRoleWithAction
