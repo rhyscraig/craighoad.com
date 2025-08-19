@@ -1,12 +1,29 @@
-default_install_hook_types: [commit-msg, pre-commit, pre-push]
-default_stages: [commit]
-fail_fast: true
-minimum_pre_commit_version: 2.21.0
-
+# See https://pre-commit.com for more information
+# See https://pre-commit.com/hooks.html for more hooks
 repos:
-  - repo: git@github.com:rhyscraig/pre-commit-hook.git
-    rev: 1.0.0
+  # Standard hooks for general file health
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
     hooks:
-      - id: common
-      - id: secrets
-      - id: terraform-module
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-added-large-files
+
+  # Hook to automatically format HTML, CSS, SCSS, JS, JSON, etc.
+  - repo: https://github.com/pre-commit/mirrors-prettier
+    rev: v4.0.0-alpha.8
+    hooks:
+      - id: prettier
+        types_or: [css, javascript, scss, html] # Specify file types
+
+  # Hook to lint JavaScript files for potential errors
+  - repo: https://github.com/pre-commit/mirrors-eslint
+    rev: v9.5.0
+    hooks:
+      - id: eslint
+        # You may need to add your source file directory here
+        # For example: files: ^js/
+        # If your JS files are in the root, you don't need to specify 'files'
+        additional_dependencies:
+          - eslint@9.5.0 # Match the version in your package.json if you have one
