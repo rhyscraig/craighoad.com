@@ -19,8 +19,7 @@
   "type": "html",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "husky"
+    "test": "node_modules/.bin/gulp watch"
   },
   "dependencies": {
     "acorn": "^8.15.0",
