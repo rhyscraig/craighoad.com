@@ -24,6 +24,7 @@ Before working on this project, ensure you have the following tools installed on
 To get the website running on your local machine, follow these steps:
 
 1.  **Clone the Repository:**
+
     ```bash
     git clone [https://github.com/craighoad/craighoad.com.git](https://github.com/craighoad/craighoad.com.git)
     cd craighoad.com
@@ -31,12 +32,14 @@ To get the website running on your local machine, follow these steps:
 
 2.  **Install Dependencies:**
     This will install Bootstrap, Font Awesome, Gulp, and other dependencies defined in `package.json`.
+
     ```bash
     npm install
     ```
 
 3.  **Install Pre-Commit Hooks:**
     This critical step activates the automated code quality checks for your local repository.
+
     ```bash
     pre-commit install
     ```
@@ -59,6 +62,7 @@ This project uses the `pre-commit` framework to automatically format and lint co
 You do not need to remember to run any commands manually. The checks are triggered automatically every time you run `git commit`.
 
 The framework runs the tools defined in `.pre-commit-config.yaml`, which include:
+
 - **`prettier`:** For automatically formatting HTML, CSS, SCSS, and JavaScript.
 - **`eslint`:** For finding potential errors in JavaScript files.
 - **`pre-commit-hooks`:** For general checks like trailing whitespace and file endings.
@@ -84,11 +88,13 @@ Here is the workflow you will follow:
     git add .
     git commit -m "My awesome new feature"
     ```
+
     The second time you commit, the hooks will run again, see that everything is clean, and allow the commit to succeed.
 
 ### Running Checks Manually
 
 If you ever want to run all the checks on every file in the repository (not just the ones you've staged), you can use this command:
+
 ```bash
 pre-commit run --all-files
 ```
@@ -99,8 +105,8 @@ pre-commit run --all-files
 
 Deployment is handled automatically by a **GitHub Actions** workflow defined in `.github/workflows/deploy.yaml`.
 
--   **Trigger:** A push to the `master` branch.
--   **Process:** The workflow first runs validation steps (formatting, linting). If they pass, it securely authenticates to AWS and syncs the website files to the `s3://www.craighoad.com/` S3 bucket.
+- **Trigger:** A push to the `master` branch.
+- **Process:** The workflow first runs validation steps (formatting, linting). If they pass, it securely authenticates to AWS and syncs the website files to the `s3://www.craighoad.com/` S3 bucket.
 
 ## AWS Infrastructure
 
