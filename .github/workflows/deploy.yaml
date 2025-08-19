@@ -1,13 +1,12 @@
 name: Validate and Deploy Website
 
 on:
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-
-  # Triggers the workflow on pushes to the master branch
   push:
     branches:
-      - master
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   validate-and-deploy:
@@ -15,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       id-token: write # Required for AWS OIDC authentication
-      contents: read  # Required to check out the repository
+      contents: read # Required to check out the repository
 
     steps:
       - name: Checkout Repository
@@ -25,8 +24,8 @@ jobs:
         # This step sets up Node.js, which is needed for our validation tools (Prettier, ESLint)
         uses: actions/setup-node@v4
         with:
-          node-version: "20" # Use a current LTS version of Node.js
-          cache: "npm" # Caches npm packages to speed up future runs
+          node-version: '20' # Use a current LTS version of Node.js
+          cache: 'npm' # Caches npm packages to speed up future runs
 
       - name: Install Project Dependencies
         # Installs the tools defined in your package.json (e.g., prettier, eslint)
@@ -43,7 +42,6 @@ jobs:
 
       # --- DEPLOYMENT STEPS ---
       - name: Configure AWS Credentials
-        # Securely authenticates with your AWS account using an IAM role
         uses: aws-actions/configure-aws-credentials@v4
         with:
           role-to-assume: arn:aws:iam::767828739298:role/GitHubAction-AssumeRoleWithAction
